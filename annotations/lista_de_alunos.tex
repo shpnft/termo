@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper,brazilian, fleqn]{article}
+
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections}
+\setkeys{Gin}{keepaspectratio}
+
+%https://tex.stackexchange.com/a/100406
+%29.7 cm - 1cm - 1cm - 144.90/28.4 cm = 22.60 cm
+\usepackage[a4paper, totalheight=22.60cm,includeheadfoot,left=1.5cm, right=1.0cm, top=1cm]{geometry}
+\setlength{\headheight}{144.90pt}
+
+
+\newcommand{\cabeca}{
+    \begin{tikzpicture}
+        \node(Logo) {\includegraphics[width=2.5cm]{logo.png}};
+        % \node(Logo) {\includegraphics[width=4.1cm]{logo.png}};
+
+        \node(Local) at (Logo.north east) [anchor=north west, yshift=-1.25cm,
+            align=center, execute at begin node=\setlength{\baselineskip}{3ex}]
+            {
+                \huge{\textbf{Universidade Federal do Amazonas}} \\
+                \large{\textbf{Instituto de Ciências Exatas e Tecnologia}} \\
+                \large{\textbf{\Description}}
+            };
+
+    \end{tikzpicture}
+}
+
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[c]{\cabeca}
+\fancyfoot[r]{}
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%-----------------------------------CUT HERE-----------------------------------
+
+\def\Description{Termodinâmica --  Mudança no horário}
+
+\usepackage{array}
+
+\begin{document}
+
+Os alunos matriculados na disciplina ITM012 - Termodinâmica, turma 04,
+concordam em alterar o horário da aula de \textbf{sexta-feira, 14:00 às 16:00}
+para \textbf{segunda-feira, 14:00 às 16:00}.
+
+\vspace{1cm}
+\begin{tabular}{m{7.5cm}m{9.5cm}}
+    Nome do aluno & Assinatura \\ \hline
+    ARLEANE CASTRO DA SILVA & \rule{0pt}{1.5cm} \\ \hline
+    DOUGLAS RODRIGUES NEVES & \rule{0pt}{1.5cm} \\ \hline
+    ELITA RIBEIRO MELO & \rule{0pt}{1.5cm} \\ \hline
+    GESSICA CARLA MORAES REIS & \rule{0pt}{1.5cm} \\ \hline
+    HEMELY MORAES SERRAO & \rule{0pt}{1.5cm} \\ \hline
+    HENRIQUE BARATA CASTRO & \rule{0pt}{1.5cm} \\ \hline
+    LUCAS MARTINS MARINHO & \rule{0pt}{1.5cm} \\ \hline
+    RAI STEFANO LIBORIO DOS SANTOS & \rule{0pt}{1.5cm} \\ \hline
+    RAIANE DOS SANTOS DE OLIVEIRA & \rule{0pt}{1.5cm} \\ \hline
+    WESLEY SANTIAGO DE SOUZA & \rule{0pt}{1.5cm} \\ \hline
+\end{tabular}
+
+\end{document}
