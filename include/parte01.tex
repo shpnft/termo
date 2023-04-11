@@ -272,21 +272,21 @@
         \item \textbf{Sistema compressível simples}: o trabalho é relacionado a uma mudança no volume
         \item Em um sistema compressível simples, a temperatura e o volume específico podem ser considerados independentes e a pressão como função destes dois, ou seja, 
         \(
-        p= p(T,v)
+        P= P(T,v)
         \)
-        \item Dessa função temos uma superfície \(p-v-T\)
+        \item Dessa função temos uma superfície \(P-v-T\)
     \end{itemize}
 \end{block}
 \end{frame}
 
-\begin{frame}{Superfície p-v-T da água\footnote{possivelmente}}
+\begin{frame}{Superfície P-v-T da água\footnote{possivelmente}}
 \centering
 \includegraphics[height=7.5cm-5pt]{images/pvt.png}
 \end{frame}
 
 \begin{frame}{Gás ideal}
 \[
-    pv = RT \leftarrow \text{equação de estado}
+    Pv = RT \leftarrow \text{equação de estado}
 \]
 \centering
 \includegraphics[height=7.5cm-30pt]{images/pvt-ideal.png}
@@ -297,8 +297,63 @@
     \includegraphics[height=0.8\textheight]{images/Captura de tela de 2023-04-03 13-42-22.png}
 \end{frame}
 
-\begin{frame}{Gases de van der Waals}
+\begin{frame}[c]{Gases de van der Waals}
 \[
     \left(P+\frac{a}{v^2}\right)(v-b)=RT
 \]
+\end{frame}
+
+\begin{frame}[c]{Equação de estado para um fio sob tensão}
+    \[
+        L=L_0 \left[ 1+ \frac{\mathcal{F}}{YA}+\alpha (T-T_0) \right]
+    \]
+    onde 
+    \begin{itemize}
+        \item \(L\) é o comprimento do fio
+        \item \(L_0\) é o comprimento sob tensão nula à temperatura \(T_0\)
+        \item \(Y\) é o módulo de Young (\textit{propriedade relacionada a elasticidade})
+        \item \(A\) é a área da seção reta
+        \item \(\alpha\) é o coeficiente de dilatação linear
+        \item \(\mathcal{F}\) é a tensão
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Cálculo...}
+    \begin{itemize}
+        \item A equação de estado de um sistema \(PVT\)\footnote{\(v\) e \(V\) são diferentes, por quê?} 
+            é uma relação entre \(P\), \(V\) e \(T\) em qualquer estado de equilíbrio do sistema
+        \item Há muitas outras propriedades no sistema e, possivelmente, outras equações de estado
+        \item O \textit{coeficiente de dilatação volumétrica} de um material é definido como
+            \[
+                \beta \equiv \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P
+            \]
+        \item O \textit{coeficiente de compressão isotérmica} de um material é definido como
+            \[
+                \kappa \equiv -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T
+            \]
+        \item Como vimos em Cálculo, se \(V\)\footnote{na verdade, \(v\)...} é uma propriedade e \(V=V(P,T)\), temos
+            \[
+                dV = \frac{\partial V}{\partial T} dT + \frac{\partial V}{\partial P} dP 
+                \implies dv = \beta V dT - \kappa V dP
+            \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item Se a equação anterior for integrada de algum estado de referência
+            \(V_0\), \(P_0\), \(T_0\) até algum estado arbitrário
+            \(V\), \(P\), \(T\) obteremos
+            \[
+                \int_{V_0}^V = V-V_0 = \int_{T_0}^T \beta V dT
+                - \int_{P_0}^P \kappa V dP
+            \]
+        \item \textcolor{red}{Considerando} \(V\) constante  quando \(P\) e \(T\)
+            são variadas e, além disso, \(\beta\) e \(\kappa\) também
+            constantes, temos que
+            \[
+                V=V_0 [ 1+\beta (T-T_0) - \kappa (P-P_0)]
+            \]
+            \textcolor{red}{ou seja, é possível obter a equação de estado de um sólido ou líquido}
+    \end{itemize}
 \end{frame}
