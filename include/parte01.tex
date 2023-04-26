@@ -421,3 +421,49 @@
     \includegraphics[width=\textwidth]{images/Captura de tela de 2023-04-17 13-57-07.png}
 \end{frame}
 
+\begin{frame}{Diferenciais exatas}
+    \begin{itemize}
+        \item Sejam
+            \begin{gather*}
+                dV_{1-2-3} = \left(\frac{\partial V}{\partial T}\right)_{P_1}dT+
+                \left(\frac{\partial V}{\partial P}\right)_{T_2}dP \\
+                dV_{1-4-3} = \left(\frac{\partial V}{\partial T}\right)_{P_3}dT+
+                \left(\frac{\partial V}{\partial P}\right)_{T_1}dP
+            \end{gather*}
+            \only<2->{
+            \item Subtraindo, temos
+                \[
+                    \frac{
+                        \left(\frac{\partial V}{\partial T}\right)_{P_3}-
+                        \left(\frac{\partial V}{\partial T}\right)_{P_1}
+                    }{dP} =
+                    \frac{
+                        \left(\frac{\partial V}{\partial P}\right)_{T_2}-
+                        \left(\frac{\partial V}{\partial P}\right)_{T_1}
+                    }{dT} 
+                \]
+                ou seja,
+                \[
+                    \frac{\partial^2 V}{\partial P \partial T} = 
+                    \frac{\partial^2 V}{\partial T \partial P} 
+                \]
+            \item O valor da segunda derivada parcial mista é independente da ordem de derivação
+            }
+    \end{itemize}
+    \only<1>{
+        \begin{center}
+            \includegraphics[height=\textheight-115pt]{images/Captura de tela de 2023-04-26 08-27-55.png}
+        \end{center}
+    }
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item Isso só é verdade porque \(dV\) entre os estados 1 e 3 é o mesmo independente do processo
+        \item Ou seja, \(dV\) é uma diferencial exata \textbf{e uma propriedade termodinâmica}
+        \item Calor e trabalho não são propriedades (dependem do processo) e, portanto, ''pequenas quantidades''
+            dessas grandezas não são diferenciais exatas
+        \item Por isso, representamos de uma forma diferente: \(d'Q\) e \(d'W\)
+
+    \end{itemize}
+\end{frame}
