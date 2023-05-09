@@ -448,6 +448,7 @@
                     \frac{\partial^2 V}{\partial T \partial P} 
                 \]
             \item O valor da segunda derivada parcial mista é independente da ordem de derivação
+            \item Ou seja, \(dV\) é uma diferencial exata \textbf{e uma propriedade termodinâmica}
             }
     \end{itemize}
     \only<1>{
@@ -458,12 +459,113 @@
 \end{frame}
 
 \begin{frame}
+    \begin{tcolorbox}[colback=red!10]
+        \begin{itemize}
+            \item Calor e trabalho não são propriedades (dependem do processo) e, portanto, ''pequenas quantidades''
+                dessas grandezas não são diferenciais exatas
+            \item Por exemplo, o trabalho realizado em 1-2-3 é diferente do realizado em 1-4-3
+            \item Por isso, representamos de uma forma diferente: \(d'Q\) e \(d'W\)
+
+                \centering
+                \includegraphics[height=\textheight-88pt]{images/Captura de tela de 2023-04-26 08-27-55.png}
+        \end{itemize}
+    \end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Forma diferencial da primeira lei da termodinâmica}
+    \[
+        \boxed{dU = d'Q - d'W}
+    \]
+\begin{itemize}
+    \item \textit{Para um sistema compressível simples e processos reversíveis}, podemos escrever
+        \[
+            dU=d'Q-PdV
+        \]
+    \item Em muitas ocasiões, principalmente na \textit{Química}, a quantidade
+        \(U+PV\) aparece e chamamos ela de \textbf{entalpia} (ver seção 3.12 para mais detalhes)
+        \[
+            dH = d'Q+VdP
+        \]
+    \item \textcolor{red}{Letras são importantes}: da mecânica clássica temos que \(E=K+U\), onde \(K\)
+        é a energia cinética e \(U\) a energia potencial. \textbf{Mas}, em termodinâmica, \(U\) é
+        energia interna... Assim, temos as seguintes equações diferentes tratando da ''mesma coisa''
+        \[
+            \Delta U = Q-W \qquad \Delta U = Q+W \qquad \Delta E = Q - W
+        \]
+        com a ''cereja do bolo'' \(W=\Delta K\), totalmente errada nesse contexto
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ciclo de Carnot e definição de temperatura}
     \begin{itemize}
-        \item Isso só é verdade porque \(dV\) entre os estados 1 e 3 é o mesmo independente do processo
-        \item Ou seja, \(dV\) é uma diferencial exata \textbf{e uma propriedade termodinâmica}
-        \item Calor e trabalho não são propriedades (dependem do processo) e, portanto, ''pequenas quantidades''
-            dessas grandezas não são diferenciais exatas
-        \item Por isso, representamos de uma forma diferente: \(d'Q\) e \(d'W\)
+        \item Na seção 4.7, podemos ver a demonstração da equação 4-47
+            \[
+                \frac{Q_2}{Q_1} = \frac{T_2}{T_1} \tikzmark{bup}
+            \]
+            \textit{para um gás ideal}
+        \item Mas, \textit{conforme pode ser visto na seção 5.2}, 
+            \[
+                \frac{Q_2}{Q_1} = \frac{\phi(\theta_2)}{\phi(\theta_1)}
+            \]
+            onde \(\theta_2\) e \(\theta_1\) são temperaturas
+        \item Definindo \(T=A\phi(\theta)\), temos
+            \[
+                \frac{Q_2}{Q_1} = \frac{T_2}{T_1} \implies T=T_3 \frac{Q_2}{Q_1}
+            \]
+            e com isso temos a definição de temperatura, ''sem o uso de termômetro'' \tikzmark{bop}
+
+            \only<2>{
+                \tikz[remember picture, overlay] \draw [red,->] (pic cs:bop) to[out=0,in=0] ([yshift=1ex] pic cs:bup);
+            }
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Entropia}
+    \begin{itemize}
+        \item Temos que os valores de \(Q_1\) e \(Q_2\) vistos anteriormente estão em \textit{módulo}
+            e, usando os valores com sinal, teríamos
+            \[
+                \frac{T_2}{T_1}=-\frac{Q_2}{Q_1} \implies \frac{Q_1}{T_1} + \frac{Q_2}{T_2}=0
+            \]
+            \begin{center}
+                \includegraphics[height=\textheight-92pt-42pt]{images/Carnot-cycle-p-V-diagram.svg.png}
+            \end{center}
+        \item O resultado líquido de um processo \textit{reversível} cíclico pode ser 
+            aproximado, tão de perto quanto se queira, por um grande número de ciclos de Carnot,
+            todos percorridos no mesmo sentido
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item Ou seja
+            \[
+                \oint {\frac{d'Q_r}{T}} = 0
+            \]
+            onde o índice \(r\) indica que se trata de um processo reversível
+        \item Assim, apesar de \(d'Q\) não ser uma diferencial exata, a razão \(d'Q/T\) é
+        \item Assim, podemos definir uma propriedade chamada \textbf{entropia}, onde
+            \[
+                dS \equiv \frac{d'Q}{T}
+            \]
+        \item Independente do processo que leve um estado \(a\) a um estado \(b\), temos 
+            \[
+                \int_{a}^{b} dS=S_b - S_a = \Delta S
+            \]
+        \item Para um processo cíclico reversível, temos \(\Delta S=0\)
+        \item A entropia de um sistema é determinada \textit{a menos de uma constante arbitrária}
 
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Cálculo de \(\Delta S\)}
+    \begin{itemize}
+        \item Para um processo adiabático:
+        \item Para um processo isotérmico:
+        \item<3-> Para um processo a pressão/volume constante:
+    \end{itemize}
+    \begin{center}
+        \includegraphics<2>[height=\textheight-80pt]{images/Captura de tela de 2023-05-08 13-42-22.png}
+        \includegraphics<4>[width=\textwidth]{images/Captura de tela de 2023-05-08 13-51-38.png}
+    \end{center}
 \end{frame}
