@@ -563,9 +563,62 @@
         \item Para um processo adiabático:
         \item Para um processo isotérmico:
         \item<3-> Para um processo a pressão/volume constante:
+        \item<4-> Resolva a questão 5.12
     \end{itemize}
     \begin{center}
-        \includegraphics<2>[height=\textheight-80pt]{images/Captura de tela de 2023-05-08 13-42-22.png}
+        \includegraphics<2>[height=\textheight-80pt-12pt]{images/Captura de tela de 2023-05-08 13-42-22.png}
         \includegraphics<4>[width=\textwidth]{images/Captura de tela de 2023-05-08 13-51-38.png}
     \end{center}
+\end{frame}
+
+\begin{frame}{O princípio do aumento da entropia}
+    \begin{center}
+        \includegraphics[height=\textheight-135pt]{images/Captura de tela de 2023-05-15 11-53-00.png}
+    \end{center}
+    \begin{itemize}
+        \only<1>{
+            \item Seja o processo apresentado na figura acima, onde a temperatura de
+                um corpo é aumentada de \(T_1\) para \(T_2\) por contato do corpo com
+                um único reservatório a uma temperatura \(T_2\)
+            \item Se o processo se realizar a pressão constante e a capacidade térmica 
+                puder ser considerada constante, então
+                \[
+                    \Delta S_\text{corpo} = C_P \ln{\frac{T_2}{T_1}}
+                \]
+            }
+            \only<2>{
+            \item Já o reservatório permanece com temperatura constante e o calor liberado
+                pode ser calculado por
+                \[
+                    Q=C_P (T_2 - T_1)
+                \]
+                e 
+                \[
+                    \Delta S_\text{reservatório} = -\frac{Q}{T_2} = -C_P \frac{T_2-T_1}{T_2}
+                \]
+            }
+            \only<3>{
+            \item A variação total da entropia do sistema corpo+reservatório é dada por
+                \[
+                    \Delta S = \Delta S_\text{corpo}+\Delta S_\text{reservatório}=
+                    C_P \left[\ln{\frac{T_2}{T_1}} - \frac{T_2-T_1}{T_2} \right]
+                \]
+            \item Fica como exercício mostrar que \(\Delta S\geq 0\)
+            }
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item Esse resultado é visto repetidamente na natureza: em todo processo
+            que se realize em um sistema isolado, a entropia do sistema ou aumenta 
+            (processo irreversível) ou permanece constante (processo reversível)
+        \item Enquanto a ''energia nunca pode ser criada ou destruída'', a ''entropia não
+            pode ser destruída, mas pode ser criada''
+        \item Ou seja, os únicos estados que podem ser atingidos a partir de um dado
+            estado inicial por processos adiabáticos são aqueles em que a entropia é
+            maior ou igual à do estado inicial
+        \item Resolva a questão 5.16
+        \item Resolva a questão 5.21
+    \end{itemize}
 \end{frame}
