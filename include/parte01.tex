@@ -622,3 +622,97 @@
         \item Resolva a questão 5.21
     \end{itemize}
 \end{frame}
+
+\begin{frame}{Primeira e segunda leis combinadas}
+    \begin{itemize}
+        \item Temos que a primeira lei da termodinâmica na forma diferencial é dada por
+            \[
+                d'Q=dU+d'W
+            \]
+        \item Para um sistema \(PVT\), temos
+            \[
+                d'W=PdV
+            \]
+        \item A segunda lei ''define''
+            \[
+                dS = \frac{d'Q}{T}
+            \]
+        \item Assim, podemos escrever
+            \[
+                TdS=dU + PdV
+            \]
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Entalpia, Helmholtz e Gibbs}
+    \begin{itemize}
+        \item Além da energia interna \(U\), temos as seguintes \textit{funções}
+            \begin{gather*}
+                H=U+PV \\
+                F=U-TS \\
+                G=F+PV
+            \end{gather*}
+        \item O calor absorvido ou liberado durante uma mudança de fase (temperatura 
+            e pressão constantes) é igual a diferença entre as entalpias do sistema
+            nas duas fases
+        \item Em um processo \textit{à temperatura e volume constantes}, temos que o 
+            trabalho ''não PdV'' é menor que o decréscimo de \(F\)
+        \item Em um processo \textit{à temperatura e pressão constantes}, temos que o 
+            trabalho ''não PdV'' é menor que o decréscimo de \(G\)
+        \item Como \(F\) e \(G\) são relacionadas \textit{à parcela da energia disponível para virar trabalho},
+            elas são comumente chamadas de energias livres
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Diferenciais}
+    \begin{itemize}
+        \item Se são propriedades, têm diferenciais exatas:
+            \begin{gather*}
+                dU = TdS - PdV \\
+                dF = dU - TdS - SdT = -SdT - PdV \\
+                dG= dF + PdV + VdP = -SdT + VdP \\
+                dH = dU + PdV + VdP = TdS + VdP
+            \end{gather*}
+        \item E como vimos em Cálculo II:
+            \[
+                z=f(x,y) \implies dz = \frac{\partial z}{\partial x} dx + \frac{\partial z}{\partial y} dy
+            \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item Ou seja:
+            \begin{align*}
+                    & \left(\frac{\partial U}{\partial S}\right)_V = T \qquad & \left(\frac{\partial U}{\partial V}\right)_S = -P \\
+                    & \left(\frac{\partial F}{\partial T}\right)_V = -S \qquad & \left(\frac{\partial F}{\partial V}\right)_T = -P \\
+                    & \left(\frac{\partial G}{\partial T}\right)_P = -S \qquad & \left(\frac{\partial G}{\partial P}\right)_T = V \\
+                    & \left(\frac{\partial H}{\partial S}\right)_P = T \qquad & \left(\frac{\partial H}{\partial P}\right)_S = V
+            \end{align*}
+        \item Lembrando de Física III:
+            \[
+                E_x = \frac{\partial \phi}{\partial x} \qquad
+                E_y = \frac{\partial \phi}{\partial y} \qquad
+                E_z = \frac{\partial \phi}{\partial z} 
+            \]
+        \item Chamamos as grandezas \(U\), \(H\), \(F\) e \(G\) de potenciais termodinâmicos
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Equação característica}
+    \begin{itemize}
+        \item A equação para um potencial termodinâmico em termos de \textit{variáveis características} é conhecida
+            como equação característica
+        \item \textbf{Todas as propriedades termodinâmicas podem ser obtidas pela derivação da equação característica}
+        \item Atividade: 
+            \begin{itemize}
+                \item Relações de Maxwell
+                \item Problema 7.3
+                \item Problema 7.8
+                \item Problema 7.8 com a expressão do problema 7.7
+                \item Problema 7.10
+
+            \end{itemize}
+    \end{itemize}
+\end{frame}
