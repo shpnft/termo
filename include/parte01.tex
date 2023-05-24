@@ -716,3 +716,102 @@
             \end{itemize}
     \end{itemize}
 \end{frame}
+
+% \begin{frame}{Espontaneidade de um processo}
+%     \begin{itemize}
+%         \item Se um sistema está completamente isolado de suas vizinhanças, um processo
+%             será \textit{espontâneo} se a entropia do sistema aumentar
+%         \item E se o sistema \textit{não} está completamente isolado? Vimos na seção 7.4 que 
+%             \begin{itemize}
+%                 \item Se \(V\) e \(T\) são constantes, então \(F_2 \leq F_1\)
+%                 \item Se \(P\) e \(T\) são constantes, então \(G_2 \leq G_1\)
+%             \end{itemize}
+%     \end{itemize}
+% \end{frame}
+
+\begin{frame}{Teorema de Nernst }
+    \begin{itemize}
+        \item Nós vimos que
+            \[
+                H=U+PV \implies dH = dU + PdV + VdP \implies dH = d'Q+VdP \implies \Delta H = Q + V\Delta P
+            \]
+        \item Para uma reação química ocorrendo a pressão constante, temos \(\Delta H=Q\)
+        \item Suponha que a reação provoque um aumento de temperatura e que calor seja transferido para um reservatório
+            a uma temperatura \(T\). Assim:
+            \[
+                \Delta H = H_2 - H_1 = -Q
+            \]
+            onde \(H_1\) é a entalpia inicial do sistema, \(H_2\) é a entalpia final do sistema e \(-Q\) é o 
+            \textit{calor de reação}
+    \end{itemize}
+    \centering
+    \includegraphics[width=\textwidth-75pt]{images/Captura de tela de 2023-05-24 12-05-18.png}
+\end{frame}
+
+% SVG path from Sarang:
+% https://upload.wikimedia.org/wikipedia/commons/a/ac/U%2B262D.svg
+\newcommand*{\hamsic}{%
+  \begingroup
+    \settoheight{\dimen0 }{H}%
+    \resizebox{!}{\dimen0 }{%
+      \tikz\fill svg[yscale=-1]{%
+        M67,80l13,19L130,65L108,52z%
+        M54,103A60,60 0 1,0 55,23A50,50 0 1,1 55,101z%
+        m0,0L14,160l19,10L64,110z%
+        M95,87l46,79l17,-12L108,79z%
+      };%
+    }%
+  \endgroup
+}
+
+\begin{frame}
+    \begin{itemize}
+        \item Podemos mostrar que 
+            \[
+                G=H-TS \implies G=H+T\left(\dfrac{\partial G}{\partial T}\right)_P
+                \implies \Delta G = \Delta H + T{\color{red}\left(\frac{\partial \Delta G}{\partial T}\right)_P}
+            \]
+            e vimos que para que o processo ''ocorra'' (assumindo \(A=0\) e
+            \(P\) e \(T\) constantes) temos \(G_2 \leq G_1\), ou seja, \(\Delta G \leq 0\)
+            (mais detalhes na seção 7.1 do livro base)
+        \item Nernst ''notou'' que em uma reação o valor de \(\Delta G\) se aproxima do valor de \(\Delta H\) a medida
+            que a temperatura diminui e propôs que
+            \[
+                \lim_{T \to 0} {\color{red}\left(\frac{\partial \Delta G}{\partial T} \right)_P} = 0
+            \]
+        \item Mas \(\left(\partial G / \partial T\right)_P =  -S\) e assim
+            \[
+                \lim_{T \to 0} {(S_1 - S_2)} = 0
+            \]
+            ou seja, \textbf{na vizinhança do zero absoluto, todas as reações em um líquido ou sólido
+            em equilíbrio interno ocorrem sem mudança na entropia}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Terceira lei da Termodinâmica}
+     Em 1911, Planck propôs que \textbf{a entropia de toda substância sólida ou líquida em equilíbrio interno a 
+     zero absoluto é nula}:
+     \[
+         \lim_{T\to 0} S = 0
+     \]
+ \end{frame}
+
+ \begin{frame}
+     \centering
+     \includegraphics[height=\textheight-10pt]{images/Captura de tela de 2023-05-24 13-04-37.png}
+ \end{frame}
+
+ \begin{frame}
+     \centering
+     \includegraphics[height=\textheight-10pt]{images/Captura de tela de 2023-05-24 13-10-31.png}
+ \end{frame}
+ \begin{frame}
+     \centering
+     \includegraphics[height=\textheight-10pt]{images/Captura de tela de 2023-05-24 13-16-35.png}
+ \end{frame}
+ \begin{frame}
+     \centering
+     \includegraphics[height=\textheight-10pt]{images/Captura de tela de 2023-05-24 13-19-17.png}
+ \end{frame}
+
+
